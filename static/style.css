@@ -1,0 +1,22 @@
+:root{color-scheme:dark;font-family:Inter,system-ui,Arial,sans-serif;background:#0b1220;color:#eef3ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#1b3551 0,#0b1220 42%);min-height:100vh}
+.shell{width:min(760px,100%);margin:auto;padding:28px 18px 40px}
+.eyebrow{font-size:11px;letter-spacing:.18em;color:#70d6c5;font-weight:800}
+h1{font-size:clamp(36px,8vw,58px);line-height:1.02;letter-spacing:-.05em;margin:16px 0}
+h1 span{color:#70d6c5}.sub{color:#a9b7cc;max-width:540px;line-height:1.6}
+.status-card,.panel{background:rgba(20,32,51,.9);border:1px solid #2b3d56;border-radius:20px;padding:20px;margin-top:22px;box-shadow:0 16px 40px #0002}
+.status-line{display:flex;align-items:center;gap:9px;color:#b9c8db;font-size:14px}
+.dot{width:9px;height:9px;border-radius:50%;background:#8290a3}.dot.live{background:#70d6c5;box-shadow:0 0 12px #70d6c5}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}
+.metrics>div{background:#0e1929;border-radius:14px;padding:14px;min-width:0}
+small{display:block;color:#8294ad;font-size:10px;letter-spacing:.1em}
+strong{display:block;font-size:28px;margin:7px 0 2px;overflow-wrap:anywhere}.result{font-size:16px;line-height:1.3}
+.actions{display:flex;gap:10px}button{border:0;border-radius:12px;padding:14px 18px;background:#70d6c5;color:#08201e;font-weight:800;font-size:14px;cursor:pointer}
+button.secondary{background:#26364c;color:#e9f0fb}button:disabled{opacity:.4;cursor:not-allowed}
+.hint{font-size:12px;line-height:1.5;color:#91a2b9;margin:16px 0 0}
+h2{font-size:17px;margin:0 0 16px}.readings{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.readings div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #293a51;padding:9px 0;font-size:13px}
+.readings span{color:#9bacc2}.readings b{font-variant-numeric:tabular-nums}
+ul{padding:0;margin:0;list-style:none}li{padding:11px 0;border-bottom:1px solid #293a51;font-size:13px;color:#c4d0e0}
+li:last-child{border:0}.empty{color:#8294ad}footer{text-align:center;color:#71829a;font-size:11px;margin-top:25px}
+@media(max-width:420px){.shell{padding:22px 14px}.metrics{gap:7px}.metrics>div{padding:10px}strong{font-size:23px}.result{font-size:14px}}

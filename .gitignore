@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Local and participant data (never commit personal collection records)
+collected_windows.csv
+training_data.csv
+*.migrating
+
+# OS / editor
+.DS_Store
+.vscode/

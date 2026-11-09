@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Explore a student-built driver behaviour analysis prototype using smartphone motion sensors, GPS speed and machine learning to classify driving patterns.">
+  <meta name="keywords" content="driver behaviour analysis, driver behaviour monitoring, driving pattern detection, smartphone telematics, driver safety project, machine learning">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Smart Driver Behaviour Analyser">
+  <meta property="og:description" content="A student-built prototype for analysing driving patterns from smartphone motion sensors and GPS speed.">
+  <title>Driver Behaviour Analysis &amp; Monitoring | Smart Driver Analyser</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="eyebrow">MOBILE TELEMATICS • ACADEMIC PROTOTYPE</div>
+      <h1>Smart Driver<br><span>Behaviour Analyser</span></h1>
+      <p class="sub">A machine-learning prototype that analyses smartphone motion-sensor readings and GPS speed to identify possible driving patterns such as acceleration, braking, turning and rough-road movement.</p>
+    </header>
+
+    <section class="status-card">
+      <div class="status-line"><span class="dot" id="dot"></span><span id="status">Monitoring stopped</span></div>
+      <div class="metrics">
+        <div><small>GPS SPEED</small><strong id="speed">--</strong><small>km/h</small></div>
+        <div><small>SAMPLES</small><strong id="samples">0</strong><small>collected</small></div>
+        <div><small>LAST RESULT</small><strong class="result" id="result">--</strong><small id="method">Awaiting data</small></div>
+      </div>
+      <div class="actions">
+        <button id="start">Start monitoring</button>
+        <button id="stop" class="secondary" disabled>Stop</button>
+      </div>
+      <p class="hint" id="hint">Allow motion and location permissions when prompted. Use only while safely mounted; never handle the phone while driving.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Live sensor readings</h2>
+      <div class="readings">
+        <div><span>Acceleration X</span><b id="ax">--</b></div>
+        <div><span>Acceleration Y</span><b id="ay">--</b></div>
+        <div><span>Acceleration Z</span><b id="az">--</b></div>
+        <div><span>Rotation X</span><b id="gx">--</b></div>
+        <div><span>Rotation Y</span><b id="gy">--</b></div>
+        <div><span>Rotation Z</span><b id="gz">--</b></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Event log</h2>
+      <ul id="events"><li class="empty">No analysis events yet.</li></ul>
+    </section>
+
+    <section class="panel" aria-labelledby="about-title">
+      <h2 id="about-title">How the driver behaviour analyser works</h2>
+      <p class="sub">The browser reads motion data from the phone's accelerometer and gyroscope. When location permission and GPS speed are available, speed changes are included as an additional feature. The server analyses each short window with a machine-learning model and returns a prototype behaviour estimate.</p>
+      <p class="hint">This is an academic demonstration. Predictions can be affected by phone orientation, mounting, sensor quality and GPS availability. Some events may produce similar readings, so results require validation with safely collected, independently labelled driving data.</p>
+    </section>
+
+    <footer>Academic prototype · Not a certified driver-safety or accident-detection system.</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
