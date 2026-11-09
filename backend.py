@@ -18,9 +18,8 @@ TRAINING_CSV = BASE_DIR / "training_data.csv"
 COLLECTION_CSV = BASE_DIR / "collected_windows.csv"
 
 # Share this code privately with your invited participants.
-# Change it before sharing the site if you want a different code.
-COLLECTOR_ACCESS_CODE = os.environ.get("COLLECTOR_ACCESS_CODE", "").strip()
-
+# Change it before sharing the site if you want a different cod
+COLLECTOR_ACCESS_CODE = os.getenv("COLLECTOR_ACCESS_CODE", "change-this-code")
 
 def verify_collection_access_code(candidate: str) -> None:
     """Fail closed unless the owner configures a private environment secret."""
