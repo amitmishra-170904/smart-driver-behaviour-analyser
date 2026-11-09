@@ -188,7 +188,7 @@ async function sendBatch(){
       $("result").textContent = data.classification.replaceAll("_"," ");
       $("method").textContent = data.method.replaceAll("_"," ");
       if(data.classification !== "normal_or_unclassified")
-        log(`${data.classification.replaceAll("_"," ")} (${data.method})`);
+        log(`${data.classification.replaceAll("_"," ")}`);
     }
   }catch(e){ $("hint").textContent = "Could not reach the analysis server. Check your connection."; }
 }
